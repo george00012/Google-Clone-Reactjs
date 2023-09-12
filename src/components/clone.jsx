@@ -5,12 +5,9 @@ import voice from "../components/img/keyboard_voice_FILL0_wght400_GRAD0_opsz24.p
 import React, { useEffect } from "react";
 
 function Clone() {
-  // Mueve la declaración del manejador de búsqueda fuera de SearchGoogle
   const handleSearchSubmit = (event) => {
-    event.preventDefault(); // Evitar que el formulario se envíe de forma predeterminada.
-    // Obtener la consulta del input
+    event.preventDefault(); 
     const query = event.target.query.value;
-    // Redirigir al usuario a la URL de búsqueda de Google Custom Search con la consulta
     window.location.href = `https://cse.google.com/cse?cx=f71663c08e15342f2&q=${encodeURIComponent(query)}`;
   };
 
@@ -74,7 +71,7 @@ function Clone() {
         </h1>
         <div className="search">
           <img src={search} alt="search"></img>
-          {/* Elimina la URL incorrecta en el atributo 'action' del formulario */}
+          {}
           <form onSubmit={handleSearchSubmit}>
             <input
               type="text"
